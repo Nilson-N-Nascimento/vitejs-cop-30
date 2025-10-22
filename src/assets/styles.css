@@ -1,0 +1,264 @@
+:root {
+  --cop30-green: #0d5e3a;
+  --cop30-light-green: #20a357;
+  --cop30-blue: #0077be;
+  --cop30-yellow: #ffc20e;
+  --cop30-dark: #1a1a1a;
+  --cop30-gray: #6c757d;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Navbar customizada */
+.navbar-cop30 {
+  background: linear-gradient(135deg, var(--cop30-green) 0%, var(--cop30-light-green) 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-cop30 .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.navbar-cop30 .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  transition: all 0.3s;
+  margin: 0 0.5rem;
+}
+
+.navbar-cop30 .nav-link:hover,
+.navbar-cop30 .nav-link.router-link-active {
+  color: var(--cop30-yellow) !important;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--cop30-green) 0%, var(--cop30-blue) 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+  background-size: cover;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards de Eventos */
+.evento-card {
+  transition: all 0.3s;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.evento-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.evento-card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.evento-card:hover img {
+  transform: scale(1.1);
+}
+
+.badge-categoria {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+/* Botões customizados */
+.btn-cop30 {
+  background: var(--cop30-green);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-cop30:hover {
+  background: var(--cop30-light-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 94, 58, 0.3);
+}
+
+.btn-outline-cop30 {
+  border: 2px solid var(--cop30-green);
+  color: var(--cop30-green);
+  background: transparent;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-outline-cop30:hover {
+  background: var(--cop30-green);
+  color: white;
+}
+
+/* Filtros */
+.filtros-container {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Loading spinner */
+.spinner-border-cop30 {
+  color: var(--cop30-green);
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--cop30-dark);
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 4rem;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--cop30-yellow);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .navbar-cop30 .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Badges de categoria */
+.badge-Cerimônia {
+  background: #dc3545;
+}
+
+.badge-Painel {
+  background: #0077be;
+}
+
+.badge-Workshop {
+  background: #ffc107;
+  color: #333;
+}
+
+.badge-Mesa.Redonda,
+.badge-Mesa-Redonda {
+  background: #6f42c1;
+}
+
+.badge-Palestra {
+  background: #20c997;
+}
+
+.badge-Exposição {
+  background: #fd7e14;
+}
+
+/* Info boxes */
+.info-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.info-box i {
+  font-size: 2rem;
+  color: var(--cop30-green);
+  margin-bottom: 1rem;
+}
+
+/* Contador de estatísticas */
+.stat-box {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h3 {
+  color: var(--cop30-green);
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  color: var(--cop30-gray);
+  font-size: 1.1rem;
+  margin: 0;
+}
